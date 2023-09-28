@@ -1,0 +1,12 @@
+table{
+    margin: auto;
+    margin-top:20px;
+}
+thead{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+tr{
+    text-align: center; 
+}
