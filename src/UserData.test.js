@@ -1,4 +1,4 @@
-import { screen, render, within, getByRole } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 import UsersData from "./UsersData";
 test("testing whether the component is rendered with 2 rows", () => {
   const userss = [
