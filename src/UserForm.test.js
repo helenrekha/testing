@@ -94,3 +94,20 @@ test("it calls onUserAdd when the form is submitted using mock fn", async () => 
     });
   });
 });
+test("check whether input field is empty after button is clicked", async () => {
+  render(<UserForm usersAdd={() => {}} />);
+  const [nameInput, emailInput] = screen.getAllByRole("textbox");
+
+  await user.click(nameInput);
+  await user.keyboard("jane");
+  await user.click(emailInput);
+  const button = screen.getByRole("button");
+  button.click(button);
+
+  await waitFor(() => {
+    expect(nameInput).toHaveValue("");
+  });
+  await waitFor(() => {
+    expect(emailInput).toHaveValue("");
+  });
+});

@@ -7,6 +7,8 @@ export default function UserForm({ usersAdd }) {
     e.preventDefault();
     console.log(userName, userMail);
     usersAdd({ userName, userMail });
+    setUserMail("");
+    setUserName("");
   };
   return (
     <form onSubmit={handleSubmit}>
