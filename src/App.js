@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UserForm from "./UserForm";
 import UsersData from "./UsersData";
+import Random from "./Random";
 export default function App() {
   const [users, setUsers] = useState([]);
   const usersAdd = (user) => {
@@ -10,6 +11,7 @@ export default function App() {
     <div>
       <UserForm usersAdd={usersAdd} />
       <UsersData users={users} />
+      <Random />
     </div>
   );
 }
